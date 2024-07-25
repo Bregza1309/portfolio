@@ -1,7 +1,6 @@
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
-import BackToTopButton from './BackTopButton';
 // Testimonial rotation
 type Testimonial = {
   text: string;

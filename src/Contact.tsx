@@ -1,6 +1,5 @@
 import { useForm, FieldError } from 'react-hook-form';
 import { ValidationError } from './ValidationError';
-import { Box, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import useWeb3forms from '@web3forms/react';
 import { useState } from 'react';

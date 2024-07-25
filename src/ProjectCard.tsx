@@ -1,5 +1,4 @@
 import type { Project } from './Projects';
-import { Button } from '@mui/material';
 import ProjectModal from './ProjectModel';
 import gitHubImage from './Images/github-logo.jpeg';
 export const ProjectCard = ({ title, description, url }: Project) => {

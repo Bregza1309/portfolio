@@ -13,7 +13,12 @@ const skills: Skill[] = [
   { name: 'C# Asp.Net Rest APIs', level: 90 },
   { name: 'C# Asp.Net Blazor /Razor views', level: 95 },
   { name: 'Javascript (React&Typescript)', level: 90 },
+  { name: 'Tailwind CSS ', level: 90 },
   { name: 'Solidity Smart Contract Dev', level: 85 },
+  { name: 'Python Programming', level: 80 },
+  { name: 'Java (Swing) ', level: 85 },
+  { name: 'Java (Web Dev) ', level: 85 },
+  { name: 'MySQL /MSSQL ', level: 85 },
 ];
 
 export const Skills = () => {

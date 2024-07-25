@@ -10,7 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 type link = {
   to: string;
   label: string;
@@ -29,10 +30,7 @@ const links: link[] = [
     to: '#projects',
     label: 'Projects',
   },
-  {
-    to: '#Blog',
-    label: 'Blog',
-  },
+
   {
     to: '#contact',
     label: 'Contact',
@@ -80,22 +78,19 @@ export const NavMenu = () => {
             <MenuIcon />
           </IconButton>
           <Avatar className="bg-teal-600 w-14 h-14 sm:hidden hidden md:flex">BM</Avatar>
-          <div className="grid sm:grid-cols-4 gap-4 m-auto grid-cols-4 ">
-            <a href="" className="no-underline">
-              <FontAwesomeIcon icon={faTwitter} className="text-white h-6 hover:text-teal-400" />
-            </a>
-            <a href="" className="no-underline">
+          <div className="grid  gap-4 m-auto grid-cols-3 ">
+            <a href="https://www.facebook.com/brandon.muchesa" className="no-underline">
               <FontAwesomeIcon icon={faFacebook} className="text-white h-6 hover:text-teal-400" />
             </a>
-            <a href="" className="no-underline">
+            <a href="https://github.com/Bregza1309" className="no-underline">
               <FontAwesomeIcon icon={faGithub} className="text-white h-6 hover:text-teal-400" />
             </a>
-            <a href="" className="no-underline">
-              <FontAwesomeIcon icon={faInstagram} className="text-white h-6 hover:text-teal-400" />
+            <a href="www.linkedin.com/in/brendon-muchesa-2066b7216" className="no-underline">
+              <FontAwesomeIcon icon={faLinkedin} className="text-white h-6 hover:text-teal-400" />
             </a>
           </div>
           <div className="hidden sm:hidden md:block ml-auto">
-            <List className={`grid grid-cols-5`}>
+            <List className={`grid grid-cols-4 gap-2`}>
               {links.map((link) => (
                 <ListItem key={link.label} disablePadding>
                   <ListItemButton
@@ -130,19 +125,3 @@ export const NavMenu = () => {
     </div>
   );
 };
-/*export const NavMenu = () => {
-  return (
-    <nav className="bg-slate-900 text-light p-4 fixed w-full z-10">
-      <div className="container mx-auto flex justify-between items-center">
-        <Avatar className="bg-teal-600" sx={{ width: 56, height: 56 }}>
-          BM
-        </Avatar>
-        <div>
-          {links.map((link) => (
-            <NavItem to={link.to} label={link.label} />
-          ))}
-        </div>
-      </div>
-    </nav>
-  );
-};*/
