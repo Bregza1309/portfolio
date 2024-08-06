@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 import { Typed } from 'react-typed';
-
 export const Hero = () => {
   const el = useRef(null);
   useEffect(() => {
@@ -34,7 +33,7 @@ export const Hero = () => {
             I'm a <span ref={el}></span>
           </p>
           <a
-            href="/path-to-your-resume.pdf"
+            href="./docs/CVUpdatedPdf.pdf"
             download
             className=" bg-teal-500 no-underline text-white px-6 py-3 rounded-full hover:bg-teal-700 transition duration-300"
           >

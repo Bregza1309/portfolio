@@ -5,6 +5,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import gitHubImage from './Images/github-logo.jpeg';
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { IconButton } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
@@ -47,12 +50,20 @@ export default function ProjectModal({ title, url, description }: Project) {
               <Typography id="modal-modal-description" className="md:text-xl m-2">
                 {description}
               </Typography>
-              <Button
-                href={url}
-                className="bg-teal-700 rounded-xl text-white hover:bg-teal-950 p-4"
-              >
-                Source Code
-              </Button>
+              <div className="grid grid-cols-2 gap-4">
+                <Button
+                  href={url}
+                  className="bg-teal-700 rounded-xl text-white hover:bg-teal-950 p-4"
+                >
+                  Code
+                </Button>
+                <Button
+                  onClick={handleClose}
+                  className="bg-red-600 rounded-xl text-white hover:bg-red-800 p-4 text-sm"
+                >
+                  Exit
+                </Button>
+              </div>
             </div>
           </div>
         </Box>
