@@ -4,41 +4,10 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectCard } from './ProjectCard';
-
+import { projects } from './utils';
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
-export type Project = {
-  title: string;
-  url?: string;
-  description: string;
-};
 
-const projects: Project[] = [
-  {
-    title: 'Student Transport Management(STM)',
-    url: `https://github.com/Bregza1309/STM`,
-    description:
-      'A web app that utilizes c# Asp.net core and blazor to modernize traditional student transport management .IT provides features such as parent-child monitoring through transportation routes , secure driver resistration , intuitive and easy to use User interfaces  .Check out more by clicking the source button below',
-  },
-  {
-    title: 'Community Blog',
-    url: `https://github.com/Bregza1309/MidvaalCommunityBlog`,
-    description:
-      'A full-featured community blog solution with real-time communication channels . Check out the source code for more details.',
-  },
-  {
-    title: 'Personal Portfolio',
-    url: `https://github.com/Bregza1309/portfolio`,
-    description:
-      'A modern , fully responsive perosnal portfolio designed using React & Typescript ,and Tailwindcss for the css designs . Check out the source code for more details.',
-  },
-  {
-    title: 'Data Science',
-    url: `https://github.com/Bregza1309/data-science-and-analysis`,
-    description:
-      'Various ML and Data Analytics Projects implemented using Python and Jupiter Notebooks. Check out the source code for more details.',
-  },
-];
 export const Projects = () => {
   const cardContainer = useRef<HTMLDivElement>(null);
   useGSAP(
@@ -82,7 +51,13 @@ export const Projects = () => {
         className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 md:gap-32 gap-8 mt-8"
       >
         {projects.map((project) => (
-          <ProjectCard title={project.title} description={project.description} url={project.url} />
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            gitUrl={project.gitUrl}
+            image={project.image}
+            hostUrl={project.hostUrl}
+          />
         ))}
       </div>
     </section>
