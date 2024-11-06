@@ -1,4 +1,5 @@
 import sharemeLogo from './Images/logowhite.png';
+import carePulseLogo from './Images/onboarding-img.png';
 export type Project = {
   title: string;
   gitUrl: string;
@@ -16,7 +17,15 @@ export const projects: Project[] = [
     image: sharemeLogo,
   },
   {
-    title: 'Student Transport Management(STM)',
+    title: 'CarePulse',
+    gitUrl: 'https://github.com/Bregza1309/HealthcareWebApp-carepulse',
+    hostUrl: 'https://healthcare-web-app-carepulse.vercel.app/',
+    image: carePulseLogo,
+    description:
+      'A healthcare appointment system that manages the creation, scheduling , cancelling of patient appointments.It is built using Nextjs , Appwrite database and Twilio SMS services',
+  },
+  {
+    title: 'STM',
     gitUrl: `https://github.com/Bregza1309/STM`,
     description:
       'A web app that utilizes c# Asp.net core and blazor to modernize traditional student transport management .IT provides features such as parent-child monitoring through transportation routes , secure driver resistration , intuitive and easy to use User interfaces  .Check out more by clicking the source button below',
